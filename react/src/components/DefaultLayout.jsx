@@ -2,12 +2,12 @@
 
 import { Link, Navigate, Outlet } from "react-router-dom";
 import { useStateContext } from "../context/ContextProvider";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import axiosClient from "../axios-client";
 
 const DefaultLayout = () => {
 
-    const {user , token , setUser , setToken} = useStateContext()
+    const {user , token , setUser , setToken , notification} = useStateContext()
 
     if(!token){
         return <Navigate to="/login" />
@@ -50,6 +50,13 @@ const DefaultLayout = () => {
                     <Outlet />
                 </main>
             </div>
+
+
+            { notification &&
+            <div className="notification">
+                {notification}
+            </div>
+            }
         </div>
     );
 }

@@ -241,3 +241,88 @@ table > tbody > tr > td {
         transform: translateY(0);
     }
 }
+.container{
+    display: flex;
+    list-style: none;
+}
+
+.page{
+	padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.disabled{
+    cursor: not-allowed;
+
+}
+
+.active{
+	border: 2px solid #000;
+    font-weight: bold;
+}
+
+.previous{
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.break{
+    padding: 10px;
+}
+
+.next{
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/*  */
+
+/* Pagination container */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+  /* Pagination buttons */
+.pagination button {
+    background-color: #00a762;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+  /* Current page button */
+.pagination .current-page {
+    background-color: #00a762;
+}
+
+  /* Previous and Next buttons */
+.pagination .prev,
+.pagination .next {
+    background-color: #00a762ff;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+/* Hover effect for Previous and Next buttons */
+.pagination .prev:hover,
+.pagination .next:hover {
+    background-color: #269a6a;
+}
+
